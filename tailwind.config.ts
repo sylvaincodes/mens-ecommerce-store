@@ -55,9 +55,22 @@ const config = {
 
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: '0rem',
+        sm: '0rem',
+        md: '0rem',
+        lg: '8rem',
+        xl: '8rem',
+        '2xl': '8rem',
+      },
       screens: {
-        "2xl": "1400px",
+
+        'xs': '320px',
+        'sm': '575px',
+        'md': '768px',
+        'lg': '1024px',
+        "xl": "1280px",
+        "2xl": "1536px",
       },
     },
     extend: {

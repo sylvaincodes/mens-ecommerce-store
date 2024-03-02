@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import {courgetteFont} from '@/app/fonts';
+import {courgetteFont, robotoFont} from '@/app/fonts';
 import {mergeOpenGraph} from '@/lib/mergeOpenGraph'
+import { LayoutOne } from "@/components/layouts/layout-one";
 
 // setup default seo
 export const metadata: Metadata = {
@@ -57,10 +58,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <head>
-        <link rel="icon" href="favicon.ico" />
-      </head>
-      <body className={courgetteFont.className}>{children}</body>
+      <body className={robotoFont.className}>
+        
+        <LayoutOne>
+          {children}
+        </LayoutOne>
+      
+      </body>
+
     </html>
   );
 }
