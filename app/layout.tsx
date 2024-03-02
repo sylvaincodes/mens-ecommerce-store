@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import {courgetteFont, robotoFont} from '@/app/fonts';
+import {onlineFont} from '@/app/fonts';
 import {mergeOpenGraph} from '@/lib/mergeOpenGraph'
 import { LayoutOne } from "@/components/layouts/layout-one";
 
@@ -58,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={robotoFont.className}>
+      <body className={onlineFont.className}>
         
         <LayoutOne>
           {children}

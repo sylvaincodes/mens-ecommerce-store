@@ -1,55 +1,26 @@
-import { courgetteFont } from '@/app/fonts'
-import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { Row } from '@/components/ui/row'
-import { cn } from '@/lib/utils'
-import { Menu, ShoppingBasket , User2 } from 'lucide-react'
-import Link from 'next/link'
+import { Menu } from './sub-components/menu'
+import { Logo } from '@/components/ui/logo'
+import { IconsGroups } from './sub-components/icons-groups'
+import { HeroOne } from '../hero/hero-one'
 
 const HeaderOne = () => {
 
   return (
-
     <header className='min-h-screen min-w-screen' 
-    style={{ backgroundImage: `url('/images/hero/hero_1.jpg')` }}>
+      style={{ backgroundImage: `url('/images/hero/hero_1.jpg')`, backgroundSize: 'cover', backgroundPosition:'center' }}>
       <Container>
             
           {/* navbar */}
           <Row classPlus='flex-row gap-y-12 text-white justify-between min-h-[120px]'>
-              <div>
-                <button>
-                  <Menu size="42"/>
-                </button>
-              </div>
-              
-              <div className={courgetteFont.className}>
-                <Link href="/" className={cn('text-4xl font-bold tracking-tight capitalize')}>
-                  men need women.
-                </Link>
-              </div>
-
-              <div className='inline-flex gap-x-8 w-[32px]'>
-                <Link href="/">
-                  <User2 size="32"/>
-                </Link>
-                <Link href="/">
-                  <ShoppingBasket  size="32"/>
-                </Link>
-              </div>
-
+              <Menu/>
+              <Logo classPlus="hidden md:block" />
+              <IconsGroups/>
           </Row>   
 
           {/* hero */}
-          <section className='pt-40 text-white'>
-          <Row classPlus='flex-col gap-y-12'>
-            <h1 className='text-sm md:text-6xl font-bold capitalize tracking-wild'>
-              welcome to women world.</h1>
-            <h2 className='text-sm md:text-3xl font-lighter'>Do not miss this collection.</h2>
-            <Button variant="primary" className="p-8 rounded-none capitalize">
-              check it out!
-            </Button>
-          </Row> 
-          </section>
+          <HeroOne/>
 
       </Container>
     </header>
