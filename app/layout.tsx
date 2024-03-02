@@ -1,13 +1,53 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import {courgetteFont} from '@/app/fonts';
+import {mergeOpenGraph} from '@/lib/mergeOpenGraph'
 
-const inter = Inter({ subsets: ["latin"] });
-
+// setup default seo
 export const metadata: Metadata = {
-  title: "Men and women are different",
-  description: "A full ecommerce store for selling mens and womens stuff",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'),
+
+  applicationName:'mens and womens are different',
+  keywords:["nextjs", 'ecommerce','shop'],
+  authors: [{ name: 'sylvaincodes', url: 'https://sylvaincodes.vercel.app' }],
+  publisher:'vercel',
+
+  alternates:{
+    canonical:'/',
+    languages:{
+      'fr': '/fr'
+    }
+  },
+
+
+  robots:{
+    index: false,
+    follow:true,
+    nocache: true,
+    googleBot:{
+      index:true,
+      noimageindex:false,
+    }
+  },
+
+  manifest: ` ${process.env.NEXT_PUBLIC_SERVER_URL}/manifest.json`,
+
+  icons:{
+    icon: '/favicon.ico',
+    shortcut:'/favicon.png',
+    apple:'favicon.png'
+  },
+
+  twitter:{
+    card: 'summary_large_image',
+    title: 'Ecommerce website',
+    description: 'Men and women are different',
+    siteId: '',
+    creator: 'sylvaincodes',
+    images:[`${process.env.NEXT_PUBLIC_SERVER_URL}/og.png`]
+  },
+
+  openGraph:mergeOpenGraph()
 };
 
 export default function RootLayout({
@@ -16,7 +56,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
+      <head>
+        <link rel="icon" href="favicon.ico" />
+      </head>
       <body className={courgetteFont.className}>{children}</body>
     </html>
   );
