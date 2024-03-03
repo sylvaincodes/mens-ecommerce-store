@@ -73,6 +73,7 @@ const config = {
         "2xl": "1536px",
       },
     },
+
     extend: {
      
       keyframes: {
@@ -91,6 +92,7 @@ const config = {
         'wave': 'wave 1.5s linear infinite',
       }
     },
+    
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config

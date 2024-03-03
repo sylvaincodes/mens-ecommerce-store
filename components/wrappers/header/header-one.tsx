@@ -1,6 +1,6 @@
 import { Container } from '@/components/ui/container'
 import { Row } from '@/components/ui/row'
-import { Menu } from './sub-components/menu'
+import { LeftMenu } from './sub-components/left-menu'
 import { Logo } from '@/components/ui/logo'
 import { IconsGroups } from './sub-components/icons-groups'
 import { HeroOne } from '../hero/hero-one'
@@ -14,7 +14,7 @@ const HeaderOne = () => {
             
           {/* navbar */}
           <Row classPlus='flex-row gap-y-12 text-white justify-between min-h-[120px]'>
-              <Menu/>
+              <LeftMenu/>
               <Logo classPlus="hidden md:block" />
               <IconsGroups/>
           </Row>   
