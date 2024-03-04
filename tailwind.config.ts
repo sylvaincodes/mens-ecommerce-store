@@ -86,10 +86,21 @@ const config = {
           '50%': { transform: 'rotate(10deg)' },
           '60%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(0deg)' }
+        },
+
+        bounce: {
+          '70%' : { transform:'translateY(0%)' },
+          '80%' : { transform:'translateY(-15%)' },
+          '90%' : { transform:'translateY(0%)' },
+          '95%' : { transform:'translateY(-7%)' },
+          '97%' : { transform:'translateY(0%)' },
+          '99%' : { transform:'translateY(-3%)' },
+          '100%' : { transform:'translateY(0)' }
         }
       },
       animation: {
         'wave': 'wave 1.5s linear infinite',
+        'bounce': 'bounce 1.5s linear infinite',
       }
     },
     

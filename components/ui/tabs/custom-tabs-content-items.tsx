@@ -19,7 +19,7 @@ export default function CustomTabsContentItems({title, activeTab, data}:
   { title: string; activeTab: string; data: Card[] }) {
   return (
     <div className={`${activeTab === title ? "flex" : "hidden"}`}>
-        <div className="p-8">
+        <div className="py-8">
           
           <Carousel>
             <CarouselContent>  
@@ -39,8 +39,8 @@ export default function CustomTabsContentItems({title, activeTab, data}:
                 })
               }
             </CarouselContent>
-            <CarouselPrevious/>
-            <CarouselNext />
+            <CarouselPrevious className='hidden lg:flex' />
+            <CarouselNext className='hidden lg:flex' />
           </Carousel>
 
         </div>

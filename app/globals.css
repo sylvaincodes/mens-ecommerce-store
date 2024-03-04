@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 
+@import "@/node_modules/react-modal-video/css/modal-video.css";
+
 .nav-item{
         & a.active{
         h4 {

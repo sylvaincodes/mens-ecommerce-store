@@ -11,7 +11,7 @@ export default function CustomTabs({
 }) {
 
 return (
-    <Row classPlus="flex text-sm font-medium text-center justify-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 w-full">
+    <Row classPlus="flex text-sm font-medium text-center justify-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 w-full pt-10">
       <ul className="flex md:gap-x-12">
         <CustomTabsItems activeTab={activeTab}  setActiveTab={setActiveTab} title="dresses" />
         <CustomTabsItems activeTab={activeTab}  setActiveTab={setActiveTab} title="pajamas" />
