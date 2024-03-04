@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/app/globals.css";
 import {onlineFont} from '@/app/fonts';
 import {mergeOpenGraph} from '@/lib/mergeOpenGraph'
+import { LayoutTwo } from "@/components/layouts/layout-two";
 
 // setup default seo
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'),
+
   applicationName:'mens and womens are different',
   keywords:["nextjs", 'ecommerce','shop'],
   authors: [{ name: 'sylvaincodes', url: 'https://sylvaincodes.vercel.app' }],
@@ -56,9 +58,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={onlineFont.className}>     
+      <body className={onlineFont.className}>
+        
+        <LayoutTwo>
           {children}
+        </LayoutTwo>
+      
       </body>
+
     </html>
   );
 }

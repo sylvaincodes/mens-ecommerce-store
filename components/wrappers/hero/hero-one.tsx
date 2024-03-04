@@ -10,7 +10,7 @@ export const HeroOne = () => {
               Welcome to Women World.</h1>
             <h2 className='text-2xl md:text-3xl font-lighter'>Do not miss this collection.</h2>
             
-            <ButtonStyle href="category/beauty" classPlus='animate-wiggle'>
+            <ButtonStyle href="shop" classPlus='animate-wiggle'>
               check it out!
             </ButtonStyle>
 

@@ -5,22 +5,18 @@ import { Logo } from '@/components/ui/logo'
 import { IconsGroups } from './sub-components/icons-groups'
 import { HeroOne } from '../hero/hero-one'
 
-const HeaderOne = () => {
+const HeaderTwo = () => {
 
   return (
-    <header className='min-h-screen min-w-screen' 
-      style={{ backgroundImage: `url('/images/hero/hero_1.jpg')`, backgroundSize: 'cover', backgroundPosition:'center' }}>
+    <header className='py-4 min-w-screen bg-white shadow-lg max-h-[70px]'>
       <Container>
             
           {/* navbar */}
-          <Row classPlus='flex-row gap-y-12 text-white justify-between min-h-[120px]'>
+          <Row classPlus='flex-row gap-y-12 text-black justify-between '>
               <LeftMenu/>
               <Logo classPlus="hidden md:block" />
-              <IconsGroups theme="white" />
+              <IconsGroups theme='dark'/>
           </Row>   
-
-          {/* hero */}
-          <HeroOne/>
 
       </Container>
     </header>
@@ -28,4 +24,4 @@ const HeaderOne = () => {
   )
 }
 
-export default HeaderOne
+export default HeaderTwo
