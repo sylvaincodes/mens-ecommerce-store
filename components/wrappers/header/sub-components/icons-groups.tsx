@@ -6,7 +6,7 @@ export const IconsGroups = ({theme}: {theme: string}) => {
   <div className='inline-flex'>
     <Link href="/" className="relative">
        <span className={`absolute text-4xl -top-3 
-       -right-4 h-[24px] w-[24px] ${theme === "light" ? "text-white" : "text-black" } rounded-full p-2 
+       -right-4 h-[24px] w-[24px] text-white ${theme === "light" ? "text-white" : "text-black" } rounded-full p-2 
        flex items-center text-center justify-center font-bold`}>0</span>
        <ShoppingCart  size="32"/>
     </Link>
