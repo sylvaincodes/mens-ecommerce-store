@@ -15,11 +15,11 @@ export default function CustomTabsItems({
 
     const handleclick = (value: string) => {
         setActiveTab(value);
-      };
+    };
 
   return (
     <li className={cn('me-2', courgetteFont.className) }>
-          <Link
+          <button
             onClick={() => handleclick(title)}
             href="#"
             className={`capitalize inline-block text-2xl p-4 
@@ -29,7 +29,7 @@ export default function CustomTabsItems({
                   }`}
           >
             {title}
-          </Link>
+          </button>
         </li>
   )
 }
